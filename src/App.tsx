@@ -1,7 +1,5 @@
-import "./App.css";
+import { RepositoryExplorer } from './components/RepositoryExplorer';
 
-function App() {
-  return <>app</>;
-}
-
-export default App;
+export const App: React.FC = () => {
+  return <RepositoryExplorer />;
+};

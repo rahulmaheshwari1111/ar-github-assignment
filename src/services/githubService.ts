@@ -10,8 +10,7 @@ export const searchRepositories = async (params: SearchParams): Promise<{
   try {
     const response = await axios.get(`${GITHUB_API_BASE}/search/repositories`, {
       params: {
-        ...params,
-        q: `user:${params.q}`,
+        ...params
       },
     });
     return response.data;
