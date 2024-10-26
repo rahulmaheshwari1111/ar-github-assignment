@@ -15,7 +15,6 @@ export const RepositoryExplorer: React.FC = () => {
     order: 'desc' as const,
     per_page: ITEMS_PER_PAGE,
     page: 1,
-    type:'private'
   });
 
   const { data, isLoading, error, status } = useRepositories(searchParams);
