@@ -23,7 +23,7 @@ A modern React application that allows users to search and explore GitHub reposi
 
 ### Prerequisites
 
-- Node.js (v16 or higher)
+- Node.js (v20 or higher)
 - npm or yarn
 
 ### Installation
@@ -113,7 +113,7 @@ Here are some ideas for future enhancements:
 
 2. Enhanced Features
    - Repository statistics visualization
-   - Repository README preview
+   - Repository Fork or Clone feature (if forking enabled)
    - User/Organization/Owner profile information (avatar,followers, etc.)
    - Commit history overview
 
