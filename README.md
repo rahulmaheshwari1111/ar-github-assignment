@@ -40,6 +40,13 @@ npm install
 # or
 yarn install
 ```
+Note: If the installation fails, please check your Node.js version and ensure it matches the required version.You can also try installing with the lockfile frozen command:
+
+```bash
+npm ci
+# or
+yarn install --frozen-lockfile
+```
 
 3. Start the development server:
 ```bash
@@ -63,7 +70,6 @@ npm test
 What is Tested?
 Repository Explorer Component: Ensures the search input and form submission work as expected.
 RepositoryTable Component: Verifies that repository data is displayed correctly in the table.
-Pagination Component: Tests navigation between pages of repository results.
 API Service: Mocks API calls to ensure that the service functions correctly when interacting with the GitHub API.
 Error Handling: Tests display of error messages when API calls fail.
 
@@ -108,23 +114,18 @@ src/
 
 Here are some ideas for future enhancements:
 
-1. Advanced Filtering
-   - Filter by repository visibility (public/private)
-
-2. Enhanced Features
+1. Enhanced Features
    - Repository statistics visualization
    - Repository Fork or Clone feature (if forking enabled)
    - User/Organization/Owner profile information (avatar,followers, etc.)
    - Commit history overview
 
-3. Technical Improvements
-   - Implement caching strategy
-   - Add unit and integration tests
+2. Technical Improvements
    - Add GitHub authentication
    - Implement rate limiting handling
    - Add error boundary components
 
-4. UI Enhancements
+3. UI Enhancements
    - Dark mode support
    - Customizable table columns
    - Repository cards view alternative
