@@ -1,6 +1,7 @@
 import axios from 'axios';
 import {SearchParams } from '../types/github';
-import githubClient from '@/api/facade/gitHubClient';
+import githubClient from '@/api/facade/githubClient';
+
 
 
 export const searchRepositories = async (params: SearchParams) => {

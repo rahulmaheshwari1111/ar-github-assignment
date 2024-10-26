@@ -1,7 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
 
 import { SearchParams } from '../types/github';
-import { searchRepositories } from '../services/githubService';
+import { searchRepositories } from '@/services/githubService';
+
 
 export const useRepositories = (params: SearchParams) => {
   const queryString = [
