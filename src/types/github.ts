@@ -1,15 +1,14 @@
 export interface Repository {
-    id: number;
+  id: number;
   name: string;
-  full_name: string;
+  full_name?: string;
   description: string;
-  html_url: string;
+  html_url?: string;
   stargazers_count: number;
   forks_count: number;
   language: string;
   updated_at: string;
-  visibility: string;
-  topics: string[];
+  topics?: string[];
 }
 
 export interface SearchParams {
@@ -21,4 +20,5 @@ export interface SearchParams {
   language?: string;
   visibility?: 'public' | 'private';
   topics?: string[];
+  type?:'all'|'owner'|'member'|'public'|'private';
 }

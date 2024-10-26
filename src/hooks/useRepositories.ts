@@ -1,4 +1,4 @@
-import { keepPreviousData, useQuery } from '@tanstack/react-query';
+import { useQuery } from '@tanstack/react-query';
 
 import { SearchParams } from '../types/github';
 import { searchRepositories } from '../services/githubService';
@@ -8,6 +8,7 @@ export const useRepositories = (params: SearchParams) => {
     params.q && `user:${params.q}`,
     params.language && `language:${params.language}`,
     params.visibility && `is:${params.visibility}`,
+    params.type && `type:${params.type}`,
     ...(params.topics || []).map(topic => `topic:${topic}`),
   ]
     .filter(Boolean)
@@ -17,6 +18,5 @@ export const useRepositories = (params: SearchParams) => {
     queryKey: ['repositories', { ...params, q: queryString }],
     queryFn: () => searchRepositories({ ...params, q: queryString }),
     enabled: !!params.q,
-    placeholderData:keepPreviousData
   });
 };

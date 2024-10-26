@@ -19,7 +19,7 @@ export const SearchForm: React.FC<SearchFormProps> = ({ onSubmit, isLoading }) =
 
   return (
     <form onSubmit={form.onSubmit((values) => onSubmit(values.username))}>
-      <Group align="flex-start">
+      <Group>
         <TextInput
           {...form.getInputProps('username')}
           placeholder="Enter GitHub username or organization"
