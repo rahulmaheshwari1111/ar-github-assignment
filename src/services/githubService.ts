@@ -1,13 +1,13 @@
 import axios from 'axios';
 import {SearchParams } from '../types/github';
+import githubClient from '@/api/facade/gitHubClient';
 
-const GITHUB_API_BASE = 'https://api.github.com';
 
 export const searchRepositories = async (params: SearchParams) => {
   try {
-    const response = await axios.get(`${GITHUB_API_BASE}/search/repositories`, {
+    const response = await githubClient.get('/search/repositories', {
       params: {
-        ...params
+        ...params,
       },
     });
     return response.data;

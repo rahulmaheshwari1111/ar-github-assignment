@@ -11,14 +11,9 @@ export const TableSkeleton: React.FC<TableSkeletonProps> = ({ rows = 10, columns
   return (
     <Group m="xl">
       <Table
-        stickyHeader
-        highlightOnHover
         withTableBorder
         withColumnBorders
-        stickyHeaderOffset={60}
-        horizontalSpacing="md"
         verticalSpacing={20}
-        c={"cyan"}
         bg="white"
         miw={"80vw"}
       >
@@ -36,7 +31,7 @@ export const TableSkeleton: React.FC<TableSkeletonProps> = ({ rows = 10, columns
             <Table.Tr key={rowIndex}>
               {Array.from({ length: columns }).map((_, colIndex) => (
                 <Table.Td key={colIndex}>
-                  <Skeleton height={30} radius="sm" width={`${50 + Math.random() * 40}%`} />
+                  <Skeleton height={20} radius="sm" width={`${50 + Math.random() * 40}%`} />
                 </Table.Td>
               ))}
             </Table.Tr>
